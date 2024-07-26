@@ -18,24 +18,25 @@ app.use(cors({
 }));
 
 
-app.get('/', (request, response) => {
-    console.log(request)
-    return response.status(234).send('Welcome To Book List App - Backend Server');
-});
-
-app.use('/books', booksRoute);
-
-
 mongoose
     .connect(mongoDBURL)
     .then(() => {
         console.log('App connected to database');
+
+        app.get('/', (request, response) => {
+            console.log(request)
+            return response.status(234).send('Welcome To Book List App - Backend Server');
+        });
+        
+        app.use('/books', booksRoute);
+
+
         app.listen(PORT, () => {
             console.log(`App is listening to port: ${PORT}`);
         });
     })
     .catch((error) => {
-        console.log(error);
+        console.log("Fehler bei der Verbindung zur Datenbank",error);
     })
 
 // Export the app for serverless environments
