@@ -14,7 +14,8 @@ app.use(express.json());
 //Middleware for handling CORS POLICY
 app.use(cors(
     {
-        origin: ["https://book-list-frontend-nine.vercel.app"],
+        //origin: ["https://book-list-frontend-nine.vercel.app"],
+        orgin: "*",
         methods: ["POST", "GET", "PUT", "DELETE"],
         credentials: true
     }
@@ -49,4 +50,5 @@ mongoose
         console.log(error);
     })
 
+// Export the app for serverless environments
 export default app;
