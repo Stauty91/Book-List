@@ -23,10 +23,7 @@ mongoose
     .then(() => {
         console.log('App connected to database');
 
-        app.use('/books', booksRoute);
-
-
-        app.listen(PORT, () => {
+            app.listen(PORT, () => {
             console.log(`App is listening to port: ${PORT}`);
         });
     })
@@ -38,6 +35,8 @@ app.get('/', (request, response) => {
     console.log(request)
     return response.status(234).send('Welcome To Book List App - Backend Server');
 });
+
+app.use('/books', booksRoute);
 
 // Export the app for serverless environments
 export default app;
