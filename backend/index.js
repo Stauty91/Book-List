@@ -12,27 +12,13 @@ console.log('Index.js file is loaded');
 app.use(express.json());
 
 //Middleware for handling CORS POLICY
+app.use(cors({
+    origin: "https://book-list-frontend-nine.vercel.app",
+    methods: ["POST", "GET", "PUT", "DELETE"],
+    credentials: true,
+    allowedHeaders: ['Content-Type']
+}));
 
-//Allow all CORS
-app.use(cors);
-
-/*app.use(cors(
-    {
-        origin: ["https://book-list-frontend-nine.vercel.app"],
-        methods: ["POST", "GET", "PUT", "DELETE"],
-        credentials: true,
-        allowedHeaders: ['Content-Type']
-    }
-));*/
-
-/* Option 2: Allow Custom Origins via CORS
-app.use(
-    cors({j
-        origin: 'http://localhost:5555',
-        methods: ['GET', 'POST', 'PUT', 'DELETE'],
-        allowedHeaders: ['Content-Type'],
-    })
-);*/
 
 app.get('/', (request, response) => {
     console.log(request)
