@@ -15,7 +15,6 @@ app.use(express.json());
 app.use(cors({
     origin: "https://book-list-frontend-nine.vercel.app",
     methods: ["POST", "GET", "PUT", "DELETE"],
-    credentials: true,
     allowedHeaders: ['Content-Type']
 }));
 
