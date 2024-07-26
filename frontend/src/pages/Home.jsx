@@ -9,10 +9,12 @@ import BooksTable from '../components/home/BooksTable';
 import BooksCard from '../components/home/BooksCard';
 
 const Home = () => {
+  //Delivering the books array as a prop to other components
   const [books, setBooks] = useState([]);
   const [loading, setLoading] = useState(false);
   const [showType, setShowType] = useState('table');
 
+//Import of MongoDB backend booklist
   useEffect(() => {
     setLoading(true);
     axios
@@ -26,6 +28,7 @@ const Home = () => {
         setLoading(false);
       });
   }, []);
+
   return (
     <div className='p-4'>
       <div className='flex justify-center items-center gap-x-4'>
@@ -47,11 +50,12 @@ const Home = () => {
         <Link to='/books/create'>
           <MdOutlineAddBox className='text-sky-800 text-4xl' />
         </Link>
-      </div>
-      {loading ?
+      </div> 
+      {loading ? 
         <Spinner /> :
         showType === 'table' ? (<BooksTable books={books} />) :
           (<BooksCard books={books} />)}
+
     </div>
   );
 };
