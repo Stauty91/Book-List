@@ -14,8 +14,8 @@ app.use(express.json());
 // Option 1: Allow All Origins with Default of cors(*)
 app.use(cors(
     {
-        origin: ["https://deploy-mern-1whq.vercel.app"],
-        methods: ["POST", "GET"],
+        origin: ["book-list-api-delta.vercel.app"],
+        methods: ["POST", "GET", "PUT", "DELETE"],
         credentials: true
     }
 ));
