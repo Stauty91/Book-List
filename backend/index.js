@@ -23,11 +23,6 @@ mongoose
     .then(() => {
         console.log('App connected to database');
 
-        app.get('/', (request, response) => {
-            console.log(request)
-            return response.status(234).send('Welcome To Book List App - Backend Server');
-        });
-        
         app.use('/books', booksRoute);
 
 
@@ -38,6 +33,11 @@ mongoose
     .catch((error) => {
         console.log("Fehler bei der Verbindung zur Datenbank",error);
     })
+
+app.get('/', (request, response) => {
+    console.log(request)
+    return response.status(234).send('Welcome To Book List App - Backend Server');
+});
 
 // Export the app for serverless environments
 export default app;
