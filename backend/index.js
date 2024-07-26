@@ -33,7 +33,7 @@ mongoose
 
 app.get('/', (request, response) => {
     console.log(request)
-    return response.status(234).send('Welcome To Book List App - Backend Server');
+    return response.status(200).send('Welcome To Book List App - Backend Server');
 });
 
 app.use('/books', booksRoute);
