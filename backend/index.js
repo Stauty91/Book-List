@@ -6,6 +6,7 @@ import booksRoute from './routes/booksRoute.js';
 import cors from 'cors';
 
 const app = express();
+console.log('Index.js file is loaded');
 
 //Middleware for parsing the request body
 app.use(express.json());
