@@ -38,18 +38,5 @@ mongoose
         console.log(error);
     })
 
-// Testfunktion zur Überprüfung der Datenbankverbindung
-const testDatabaseConnection = async () => {
-    try {
-        await mongoose.connect(mongoDBURL, { useNewUrlParser: true, useUnifiedTopology: true });
-        console.log('Datenbankverbindung erfolgreich!');
-        mongoose.connection.close();  // Verbindung schließen nach Test
-    } catch (error) {
-        console.error('Fehler bei der Datenbankverbindung:', error.message);
-    }
-};
-
-testDatabaseConnection();
-
 // Export the app for serverless environments
 export default app;
