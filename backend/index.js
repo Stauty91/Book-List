@@ -14,7 +14,7 @@ app.use(express.json());
 // Option 1: Allow All Origins with Default of cors(*)
 app.use(cors(
     {
-        origin: ["book-list-api-delta.vercel.app"],
+        origin: ["https://book-list-api-delta.vercel.app/"],
         methods: ["POST", "GET", "PUT", "DELETE"],
         credentials: true
     }
@@ -22,7 +22,7 @@ app.use(cors(
 
 /* Option 2: Allow Custom Origins via CORS
 app.use(
-    cors({
+    cors({j
         origin: 'http://localhost:5555',
         methods: ['GET', 'POST', 'PUT', 'DELETE'],
         allowedHeaders: ['Content-Type'],
