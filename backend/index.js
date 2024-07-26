@@ -14,7 +14,7 @@ app.use(express.json());
 // Option 1: Allow All Origins with Default of cors(*)
 app.use(cors(
     {
-        origin: ["https://book-list-api-delta.vercel.app/"],
+        origin: ["https://book-list-frontend-nine.vercel.app/"],
         methods: ["POST", "GET", "PUT", "DELETE"],
         credentials: true
     }
@@ -31,7 +31,7 @@ app.use(
 
 app.get('/', (request, response) => {
     console.log(request)
-    return response.status(234).send('Welcome To MERN Stack');
+    return response.status(234).send('Welcome To Book List App - Backend Server');
 });
 
 app.use('/books', booksRoute);
