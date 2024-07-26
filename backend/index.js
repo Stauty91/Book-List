@@ -12,7 +12,6 @@ console.log('Index.js file is loaded');
 app.use(express.json());
 
 //Middleware for handling CORS POLICY
-// Option 1: Allow All Origins with Default of cors(*)
 app.use(cors(
     {
         origin: ["https://book-list-frontend-nine.vercel.app"],
@@ -42,9 +41,9 @@ mongoose
     .connect(mongoDBURL)
     .then(() => {
         console.log('App connected to database');
-        app.listen(PORT, () => {
+        /*app.listen(PORT, () => {
             console.log(`App is listening to port: ${PORT}`);
-        });
+        });*/
     })
     .catch((error) => {
         console.log(error);
