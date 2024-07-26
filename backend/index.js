@@ -14,10 +14,10 @@ app.use(express.json());
 //Middleware for handling CORS POLICY
 app.use(cors(
     {
-        //origin: ["https://book-list-frontend-nine.vercel.app"],
-        orgin: "*",
+        origin: ["https://book-list-frontend-nine.vercel.app"],
         methods: ["POST", "GET", "PUT", "DELETE"],
-        credentials: true
+        credentials: true,
+        allowedHeaders: ['Content-Type']
     }
 ));
 
