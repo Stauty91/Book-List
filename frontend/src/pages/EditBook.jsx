@@ -38,7 +38,7 @@ const EditBook = () => {
 
     setLoading(true);
     axios
-      .put(`https://book-list-api-delta.vercel.app/books/${id}`, data)
+      .put(`https://book-list-api-theta.vercel.app/books/${id}`, data)
       .then(() => {
         setLoading(false);
         enqueueSnackbar('Book edited successfully', { variant: 'success'});

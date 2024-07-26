@@ -22,7 +22,7 @@ const CreateBooks = () => {
 
     setLoading(true);
     axios
-      .post('https://book-list-api-delta.vercel.app/books', data)
+      .post('https://book-list-api-theta.vercel.app/books', data)
       .then(() => {
         setLoading(false);
         enqueueSnackbar('Book created successfully', { variant: 'success' });
