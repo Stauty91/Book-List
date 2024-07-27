@@ -11,11 +11,14 @@ console.log('Index.js file is loaded');
 //Middleware for parsing the request body
 app.use(express.json());
 
-//Middleware for handling CORS POLICY
+/*Middleware for handling CORS POLICY
 app.use(cors({
     origin: "https://book-list-frontend-nine.vercel.app",
     methods: ["POST", "GET", "PUT", "DELETE"],
-}));
+}));*/
+
+//Accep all cors
+app.use(cors());
 
 
 mongoose
