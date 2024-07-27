@@ -8,7 +8,7 @@ const BooksTable = ({ books }) => {
     <table className='w-full border-separate border-spacing-2'>
             <thead>
               <tr>
-                <th className='border border-slate-600 rounded-md bg-orange-100'>No</th>
+                <th className='border border-slate-600 rounded-md bg-orange-100 max-md:hidden'>No</th>
                 <th className='border border-slate-600 rounded-md bg-orange-100'>Title</th>
                 <th className='border border-slate-600 rounded-md max-md:hidden bg-orange-100'>Author</th>
                 <th className='border border-slate-600 rounded-md max-md:hidden bg-orange-100'>
