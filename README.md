@@ -1,5 +1,13 @@
 Booklist-App
 
+DEMO:
+Hosted Frontend - Server
+https://book-list-frontend-nine.vercel.app/
+
+Hosted Backend - Server
+https://book-list-api-theta.vercel.app/
+
+
 Tech-Stack
 
 Frontend: 
